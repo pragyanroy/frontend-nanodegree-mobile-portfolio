@@ -440,9 +440,9 @@ var resizePizzas = function(size) {
           console.log("bug in sizeSwitcher");
       }
     
-     var rPizzas = document.getElementsByClassName("randomPizzaContainer");
-		for(var i = 0; i < rPizzas.length; i++) {
-			rPizzas[i].style.width = newWidth + '%';
+     var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
+		for(var i = 0; i < randomPizzas.length; i++) {
+			randomPizzas[i].style.width = newWidth + '%';
    }
   }
 
@@ -493,7 +493,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.getElementsByClassName("mover");
+  var items = document.getElementsByClassName('mover');
   
   var docBodyScr = document.body.scrollTop/ 1250;
   requestAnimationFrame(function() {
