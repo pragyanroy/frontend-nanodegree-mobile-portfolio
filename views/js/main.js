@@ -528,7 +528,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   var pizzaEl= document.getElementById("movingPizzas1");
   //above change query selector for get element id
-  for (var i = 0; i < 72; i++) {
+  for (var i = 0; i < 48; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
