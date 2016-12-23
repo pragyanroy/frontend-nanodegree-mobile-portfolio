@@ -439,29 +439,14 @@ var resizePizzas = function(size) {
         default:
           console.log("bug in sizeSwitcher");
       }
-    }
-
-    var newSize = sizeSwitcher(size);
-    var dx = (newSize - oldSize) * windowWidth;
-
-    return dx;
+    
+     var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
+		for(var i = 0; i < randomPizzas.length; i++) {
+			randomPizzas[i].style.width = newWidth + '%';
+   }
   }
 
-  // Iterates through pizza elements on the page and changes their widths
-  /*function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
-    }
-  }*/
- function changePizzaSizes(size) {
-    for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[i], size);
-      var newwidth = (document.getElementsByClassName("randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
-    }
-  }
+  
 
   changePizzaSizes(size);
 
@@ -508,9 +493,9 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.getElementsByClassName('.mover');
+  var items = document.getElementsByClassName('mover');
   
-  var docBodyScr = document.body.scrollTop
+  var docBodyScr = document.body.scrollTop/ 1250;
   requestAnimationFrame(function() {
 	for(var i = 0; i < items.length; i++) {
 		var phase = Math.sin(docBodyScr + (i % 5));
@@ -543,7 +528,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   var pizzaEl= document.getElementById("movingPizzas1");
   //above change query selector for get element id
-  for (var i = 0; i < 70; i++) {
+  for (var i = 0; i < 72; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
