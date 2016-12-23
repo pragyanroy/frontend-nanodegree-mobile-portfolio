@@ -298,7 +298,6 @@ function generator(adj, noun) {
 // Chooses random adjective and 
 
 
- noun
 function randomName() {
   var randomNumberAdj = parseInt(Math.random() * adjectives.length);
   var randomNumberNoun = parseInt(Math.random() * nouns.length);
@@ -429,13 +428,15 @@ var resizePizzas = function(size) {
 
     // Changes the slider value to a percent width
     function changePizzaSizes (size) {
+    var newWidth;
       switch(size) {
         case "1":
-          return 25;
+          newWidth=25;
+          break;
         case "2":
-          return 33.3;
+           newWidth=33.3;
         case "3":
-          return 50;
+          newWidth= 50;
         default:
           console.log("bug in sizeSwitcher");
       }
@@ -446,7 +447,7 @@ var resizePizzas = function(size) {
    }
   }
 
-  }
+  
 
   changePizzaSizes(size);
 

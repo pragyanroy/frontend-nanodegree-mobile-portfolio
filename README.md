@@ -57,3 +57,20 @@ Instructions:
 Click on the below link to open the Portfolio
 https://pragyanroy.github.io/mobile-portfolio/
 Navigate the links provided in the age to browse different projects in portfolio
+For PageSpeed Insights score for index.html
+
+1-Minified style.css, index.html
+
+2-Compressed and resized images
+
+3-Inline style
+
+
+For Frames per Second in pizza.html
+
+Changed views/js/main.js to get 60 fps or higher.
+
+Updated loop in updatePositions to reduce DOM requests
+
+Decreased number of pizzas rendered to 72
+
