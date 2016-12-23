@@ -493,12 +493,12 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.getElementsByClassName('mover');
+  var items = document.getElementsByClassName("mover");
   
-  var docBodyScroll = document.body.scrollTop/ 1250;
+  var docBodyScr = document.body.scrollTop/ 1250;
   requestAnimationFrame(function() {
 	for(var i = 0; i < items.length; i++) {
-		var phase = Math.sin(docBodyScroll + (i % 5));
+		var phase = Math.sin(docBodyScr + (i % 5));
 		items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
 }
 });
