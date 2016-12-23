@@ -435,8 +435,10 @@ var resizePizzas = function(size) {
           break;
         case "2":
            newWidth=33.3;
+           break;
         case "3":
           newWidth= 50;
+          break;
         default:
           console.log("bug in sizeSwitcher");
       }
@@ -501,6 +503,7 @@ function updatePositions() {
 	for(var i = 0; i < items.length; i++) {
 		var phase = Math.sin(docBodyScr + (i % 5));
 		items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+
 }
 });
   
