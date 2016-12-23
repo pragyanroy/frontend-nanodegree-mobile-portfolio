@@ -495,10 +495,10 @@ function updatePositions() {
 
   var items = document.getElementsByClassName('mover');
   
-  var docBodyScr = document.body.scrollTop/ 1250;
+  var docBodyScroll = document.body.scrollTop/ 1250;
   requestAnimationFrame(function() {
 	for(var i = 0; i < items.length; i++) {
-		var phase = Math.sin(docBodyScr + (i % 5));
+		var phase = Math.sin(docBodyScroll + (i % 5));
 		items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
 }
 });
